@@ -10,13 +10,19 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameLbl: UITextField!
+    @IBOutlet weak var passwordLbl: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onSigninBtn(_ sender: Any) {
+    }
+    
+    @IBAction func onSignoutBtn(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
