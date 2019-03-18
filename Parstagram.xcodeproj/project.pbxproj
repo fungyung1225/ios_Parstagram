@@ -11,6 +11,8 @@
 		CE17D3A3223F765100860EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17D3A1223F765100860EEA /* Main.storyboard */; };
 		CE17D3A5223F765400860EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE17D3A4223F765400860EEA /* Assets.xcassets */; };
 		CE17D3A8223F765400860EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17D3A6223F765400860EEA /* LaunchScreen.storyboard */; };
+		CE17D3B0223F79A400860EEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17D3AF223F79A400860EEA /* LoginViewController.swift */; };
+		CE17D3B2223F79B400860EEA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17D3B1223F79B400860EEA /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		CE17D3A4223F765400860EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE17D3A7223F765400860EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE17D3A9223F765400860EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE17D3AF223F79A400860EEA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE17D3B1223F79B400860EEA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				CE17D3A4223F765400860EEA /* Assets.xcassets */,
 				CE17D3A6223F765400860EEA /* LaunchScreen.storyboard */,
 				CE17D3A9223F765400860EEA /* Info.plist */,
+				CE17D3AF223F79A400860EEA /* LoginViewController.swift */,
+				CE17D3B1223F79B400860EEA /* FeedViewController.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -132,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE17D3B0223F79A400860EEA /* LoginViewController.swift in Sources */,
+				CE17D3B2223F79B400860EEA /* FeedViewController.swift in Sources */,
 				CE17D39E223F765100860EEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
