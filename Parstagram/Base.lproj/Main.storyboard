@@ -66,7 +66,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign up"/>
                                 <connections>
-                                    <action selector="onSignoutBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0i-jM-11w"/>
+                                    <action selector="onSignUpBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e0i-jM-11w"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -76,6 +76,7 @@
                     <connections>
                         <outlet property="passwordLbl" destination="7u0-NX-mmK" id="hXL-5h-JjJ"/>
                         <outlet property="usernameLbl" destination="MFQ-V9-RVa" id="Tcq-SY-MV5"/>
+                        <segue destination="v6g-PF-Klg" kind="presentation" identifier="loginSegue" id="auT-sE-ULn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,14 +90,14 @@
                     <view key="view" contentMode="scaleToFill" id="ki1-wl-9Bv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.3594894105" green="0.60900618169999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="zpn-fL-OOB"/>
                     </view>
                     <navigationItem key="navigationItem" id="phq-fY-HKo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="20N-Nw-Bww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2236" y="133"/>
+            <point key="canvasLocation" x="2034" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zvi-1P-Lvp">
@@ -114,7 +115,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFm-k3-k87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1297" y="133"/>
+            <point key="canvasLocation" x="1095" y="27"/>
         </scene>
     </scenes>
 </document>
