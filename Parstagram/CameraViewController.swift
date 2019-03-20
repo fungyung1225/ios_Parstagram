@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
@@ -21,7 +22,18 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onSubmitBtn(_ sender: Any) {
+        let pet = PFObject(className:"Pets")
+        pet["name"] = "Spencer"
+        pet["weight"] = 50
+        pet["owner"] = PFUser.current()!
         
+        pet.saveInBackground { (sucess, error) in
+            if(sucess){
+                print("sucess")
+            }else{
+                print("error!")
+            }
+        }
     }
     
     @IBAction func onCameraBtn(_ sender: Any) {
