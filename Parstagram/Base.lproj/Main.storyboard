@@ -134,6 +134,11 @@
                                                 <constraint firstItem="2jF-Av-8fF" firstAttribute="leading" secondItem="2tT-wY-TWk" secondAttribute="leading" constant="8" id="oDq-aN-VMC"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLbl" destination="k2v-Hd-zk0" id="Jzq-96-TNh"/>
+                                            <outlet property="photoView" destination="qmr-Ix-Zgk" id="Y8c-aL-FkI"/>
+                                            <outlet property="userNameLbl" destination="2jF-Av-8fF" id="MSt-aE-PH5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
