@@ -23,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //            configuration.applicationId = "CodePath-Parse"
             //            configuration.server = "http://45.79.67.127:1337/parse"
         }))
+        
+        //bring user to main view if user already login
+        if PFUser.current() != nil{
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            let feedNavigationController = main.instantiateViewController(withIdentifier: "FeedNavigationController")
+            window?.rootViewController = feedNavigationController
+        }
+        
         return true
     }
 
