@@ -8,11 +8,15 @@
 
 import UIKit
 import Parse
+import AlamofireImage
+import MessageInputBar
 
 class FeedViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
 
     @IBOutlet weak var tableView: UITableView!
+    var showCommentBar = false
+    let inputBar = MessageInputBar()
     
     var posts = [PFObject]()
     override func viewDidLoad() {
@@ -20,14 +24,24 @@ class FeedViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         
         tableView.delegate = self
         tableView.dataSource = self
+    
+        tableView.keyboardDismissMode = .interactive
         // Do any additional setup after loading the view.
+    }
+    
+    override var inputAccessoryView: UIView? {
+        return inputBar
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return showCommentBar
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         let query = PFQuery(className:"Posts")
-        query.includeKey("author")
+        query.includeKeys(["author","comments","comments.author"])
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in
@@ -43,7 +57,7 @@ class FeedViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         let post = posts[section]
         let comments = (post["comments"] as? [PFObject]) ?? []
         
-        return comments.count + 1
+        return comments.count + 2
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -68,8 +82,16 @@ class FeedViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             cell.photoView.af_setImage(withURL: url)
             
             return cell
-        }else{
+        }else if indexPath.row <= comments.count{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
+            let comment = comments[indexPath.row - 1]
+            cell.commentLbl.text = comment["text"] as! String 
+            let user = post["author"] as! PFUser
+            cell.nameLbl.text = user.username
+
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!//don't need custom cell
             return cell
         }
     }
